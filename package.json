@@ -1,0 +1,35 @@
+{
+  "name": "node-task-planner",
+  "version": "0.0.0",
+  "description": "scheduler for async task based on HTTP webhook",
+  "main": "index.ts",
+  "scripts": {
+    "restart": "tsc index.ts && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evasyuk/node-task-planner.git"
+  },
+  "keywords": [
+    "node",
+    "task",
+    "planner"
+  ],
+  "author": "Yevhenii Vasiuk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evasyuk/node-task-planner/issues"
+  },
+  "homepage": "https://github.com/evasyuk/node-task-planner#readme",
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^9.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.26"
+  }
+}
