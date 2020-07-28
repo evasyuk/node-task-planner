@@ -1,10 +1,11 @@
 import * as Router from "koa-router"
 import Hello from './Hello'
+import SetNewTask from "./SetNewTask"
 
 const router = new Router()
 
-// Hello world
 router.get("/hello", Hello)
+router.post("/set/one", SetNewTask)
 
 const getAllRoutes = (app) => {
     // Routes
