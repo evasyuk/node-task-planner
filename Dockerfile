@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 COPY . /usr/src/app
 RUN npm install typescript -g
 RUN npm install
-RUN tsc /usr/src/app/index.ts
+RUN tsc /usr/src/app/index.js
 
 EXPOSE 8881
 

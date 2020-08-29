@@ -2,13 +2,13 @@
   "name": "node-task-planner",
   "version": "0.0.0",
   "description": "scheduler for async task based on HTTP webhook",
-  "main": "functions/index.js",
+  "main": "functions2/index.js",
   "scripts": {
     "lint": "eslint .",
-    "serve": "firebase emulators:start --only functions",
+    "serve": "firebase emulators:start --only functions2",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
+    "deploy": "firebase deploy --only functions2",
     "logs": "firebase functions:log"
   },
   "repository": {
