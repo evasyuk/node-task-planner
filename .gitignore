@@ -1,6 +1,7 @@
-.idea/
+.env
+.firebaserc
 
-index.js
+.idea/
 
 # Logs
 logs
