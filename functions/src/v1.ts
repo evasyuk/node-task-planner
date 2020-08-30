@@ -28,7 +28,7 @@ appV1.route("/schedule")
             response.json({ uid })
         } catch (error) {
             console.log(error)
-            response.sendStatus(504)
+            response.sendStatus(501)
         }
     });
 
