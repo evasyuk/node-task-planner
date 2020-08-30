@@ -1,27 +1,19 @@
+import express from "express";
+
 import ValidationHelper from "./helpers/ValidationHelper";
 import StoreHelper from "./helpers/StoreHelper";
 
-// import express from "express";
-import express, { Response, Request } from "express";
+const appV1 = express()
+appV1.use((request: express.Request, response: express.Response, next: express.NextFunction) => {
+    console.log('request path', request.path)
+    next()
+})
 
-const getAppV1 = () => {
-    const appV1 = express()
-
-    // appV1.use(function (req, res, next) {
-    //     if (!req.headers['authorization']) {
-    //         console.log('authorization not found')
-    //         res.sendStatus(403)
-    //     } else {
-    //         console.log('authorization found', req.headers['authorization'])
-    //         next()
-    //     }
-    // })
-
-    appV1.get("schedule", (request: Request, response: Response) => {
+appV1.route("/schedule")
+    .get((request: express.Request, response: express.Response) => {
         response.send("/schedule");
-    });
-
-    appV1.post("schedule", (request : Request, response : Response) => {
+    })
+    .post((request : express.Request, response : express.Response) => {
         try {
             ValidationHelper.validateBody(
                 {
@@ -40,17 +32,8 @@ const getAppV1 = () => {
         }
     });
 
-    appV1.get("unschedule", (request: Request, response: Response) => {
-        response.send("/unschedule");
-    });
 
-    appV1.get("unschedule/all", (request: Request, response: Response) => {
-        response.send("/unschedule/all");
-    });
-
-    return appV1
-}
 
 export {
-    getAppV1,
+    appV1,
 }
