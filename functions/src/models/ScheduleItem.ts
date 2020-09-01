@@ -5,11 +5,15 @@ export default class ScheduleItem {
     cuid: string | undefined | null;
     uid: string | undefined | null;
 
+    scheduledDateNumber: number;
+
     constructor(webhook: string, scheduledDate: string, repeatMode: string, cuid?: string) {
         this.webhook = webhook
         this.scheduledDate = scheduledDate
         this.repeatMode = repeatMode
         this.cuid = cuid
+
+        this.scheduledDateNumber = 0
     }
 
     setUID = (uid: string) => {
@@ -37,6 +41,7 @@ export default class ScheduleItem {
         const data = {
             webhook: this.webhook,
             scheduledDate: this.scheduledDate,
+            scheduledDateNumber: this.scheduledDateNumber,
             repeatMode: this.repeatMode,
             cuid: null,
             uid: null,
