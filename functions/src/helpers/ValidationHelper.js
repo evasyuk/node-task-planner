@@ -1,8 +1,7 @@
-import { Request } from "express";
 import ValidationError from "../errors/ValidationError";
 
 export default class ValidationHelper {
-    static validateBody(expectedArgs : any, request : Request) {
+    static validateBody(expectedArgs, request) {
         if (!expectedArgs) {
             throw new ValidationError()
         }

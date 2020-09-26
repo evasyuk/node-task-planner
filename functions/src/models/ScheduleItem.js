@@ -1,13 +1,13 @@
 export default class ScheduleItem {
-    webhook: string;
-    scheduledDate: string;
-    repeatMode: string;
-    cuid: string | undefined | null;
-    uid: string | undefined | null;
+    // webhook: string;
+    // scheduledDate: string;
+    // repeatMode: string;
+    // cuid: string | undefined | null;
+    // uid: string | undefined | null;
 
-    scheduledDateNumber: number;
+    // scheduledDateNumber: number;
 
-    constructor(webhook: string, scheduledDate: string, repeatMode: string, cuid?: string) {
+    constructor(webhook, scheduledDate, repeatMode, cuid) {
         this.webhook = webhook
         this.scheduledDate = scheduledDate
         this.repeatMode = repeatMode
@@ -16,7 +16,7 @@ export default class ScheduleItem {
         this.scheduledDateNumber = 0
     }
 
-    setUID = (uid: string) => {
+    setUID = (uid) => {
         this.uid = uid
     }
 
